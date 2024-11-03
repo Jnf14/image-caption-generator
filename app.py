@@ -10,10 +10,12 @@ model, tokenizer, feature_extractor = load_model()
 # Create a URL route in our application for "/"
 @app.route('/', methods=['GET'])
 def home():
+  print("GET request received")
   return render_template('index.html')
 
 @app.route('/', methods=['POST'])
 def predict():
+  print("POST request received")
   # Get the image from the POST request
   image = request.files['imagefile']
   # Save the image to ./uploads
