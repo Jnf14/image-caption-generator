@@ -1,0 +1,5 @@
+/__pycache__
+/images/*
+.gitignore
+download-model.py
+bash.sh
