@@ -10,7 +10,7 @@
 
   <form class="p-5 text-center" action='/', method="post" enctype="multipart/form-data">
     <input class="form-control" type="file" name="imagefile" onchange="readURL(this);">
-    <input class="btn btn-primary mt-3"type="submit" value="Predict Image" >
+    <input class="btn btn-primary mt-3"type="submit" value="Get Caption" >
   </form>
 
   {% if caption %}
@@ -18,5 +18,10 @@
       Generated caption: {{ caption }}
   </h3>
   {% endif %}
-</div>
+
+  {% if error %}
+  <p class="text-center text-danger">
+      Error: {{ error }}
+  </p>
+  {% endif %}
 </body>
